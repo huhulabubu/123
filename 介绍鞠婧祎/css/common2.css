@@ -1,0 +1,39 @@
+.w {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/* <!-- 网页的头部 --> */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+  /* 确保没有底部margin */
+  margin-bottom: 0;
+}
+
+
+
+.shortcut ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+.shortcut li a {
+  color: #fff;
+}
+
+.shortcut li.line {
+  background-color: #999;
+  height: 12px;
+  width: 1px;
+}
+
+.shortcut li a:hover {
+  color: #5EB69C;
+}
+
+.shortcut li:first-child a {
+  color: #5EB69C;
+}

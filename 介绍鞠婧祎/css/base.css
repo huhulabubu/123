@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 写公共的样式，比如网页的头部和尾部 */
+body {
+  font: 16px/1.5 "微软雅黑";
+  color: #333;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页</title>
+  <link rel="stylesheet" href="./css/common2.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    .login-container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 50px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f3f1f1;
+    }
+
+    h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    /* 将ul变大，占据页面的一半至少 */
+    ul {
+      font-size: 18px;
+    }
+
+    /* 将里面的内容居中 */
+    ul li {
+      text-align: center;
+    }
+
+    .liuyan {
+      /* 让留言的文本域与密码框之间有间隔 */
+      display: block;
+      margin-top: 30px;
+    }
+
+    /* 移除文本域和输入框的默认焦点边框 */
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      background-color: rgb(195, 247, 247);
+    }
+
+    button:hover {
+      background-color: #7ecce7;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="shortcut">
+    <div class="w">
+      <ul>
+        <li><a href="./登录页.html" title="点击跳转登录页">请先登录</a></li>s
+        <li class="line">|</li>
+        <li><a href="./index.html" title="点击跳转基本介绍" target="_blank">基本介绍</a></li>
+        <li class="line">|</li>
+        <li><a href="./index.html#characters" title="点击跳转演过角色" target="_blank">演过角色</a></li>
+        <li class="line">|</li>
+        <li><a href="./歌曲.html" title="点击跳转歌曲" target="_blank">歌曲</a></li>
+        <li class="line">|</li>
+        <li><a href="./语录.html" title="点击跳转语录" target="_blank">语录</a></li>
+        <li class="line">|</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="login-container">
+    <h2>登录</h2>
+    <ul>
+      <li>
+        <label>用户名：</label>
+        <input type="text" id="username" name="username" placeholder="请输入用户名" autocomplete="off" required>
+
+      </li>
+      <li>
+        <label>密码：</label>
+        <input type="password" id="password" name="password" placeholder="请输入密码" autocomplete="off" required>
+      </li>
+
+      <li>
+        <label class="liuyan">留言：</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="请输入您的建议" required></textarea>
+      </li>
+      <li>
+        <button>登录</button>
+      </li>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+/* 写公共的样式，比如网页的头部和尾部 */
+/* 消除body默认的margin，确保整个页面没有外边距 */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.w {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.back {
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  width: 40px;
+  height: 50px;
+  background-color: rgb(231, 142, 157);
+}
+
+/* <!-- 网页的头部 --> */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+  /* 确保没有底部margin */
+  margin-bottom: 0;
+}
+
+/* 确保header和导航栏之间没有间距 */
+.header {
+  /* 移除顶部margin和padding */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.shortcut ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+.shortcut li a {
+  color: #fff;
+}
+
+.shortcut li.line {
+  background-color: #999;
+  height: 12px;
+  width: 1px;
+}
+
+.shortcut li a:hover {
+  color: #5EB69C;
+}
+
+.shortcut li:first-child a {
+  color: #5EB69C;
+}
+
+.header {
+  height: 500px;
+  /* 增加header高度以适应更大的容器 */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 移除所有内边距，确保与导航栏紧密连接 */
+  padding: 0;
+}
+
+.header .w {
+  /* 取消h2默认的边距 */
+  margin: 0;
+  /* 使用flex布局 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo样式 */
+.logo1 {
+  /* 定位在title-container左侧 */
+  position: absolute;
+  left: 50px;
+  /* 确保logo在中间盒子之上 */
+  z-index: 10;
+}
+
+.logo2 {
+  /* 定位在title-container右侧 */
+  position: absolute;
+  right: 50px;
+  /* 确保logo在中间盒子之上 */
+  z-index: 10;
+}
+
+
+.logo1 img,
+.logo2 img,
+.logo img {
+  /* 设置logo图片大小 */
+  width: 200px;
+  /* 调整宽度以适应logo */
+  border-radius: 50%;
+  transform-origin: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo1 img:hover,
+.logo2 img:hover,
+.logo img:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.9s ease;
+}
+
+/* 创建更大的容器盒子 */
+.header-title-container {
+  /* 更大的盒子尺寸，占据页面约三分之一 */
+  width: 90%;
+  /* 使用百分比以适应不同屏幕 */
+  max-width: 1400px;
+  height: 400px;
+  /* 增加高度 */
+  /* 相对定位作为子元素的参考 */
+  position: relative;
+  /* 居中显示 */
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列 */
+  justify-content: center;
+  align-items: center;
+  /* 添加边框和圆角 */
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 过渡效果 */
+  transition: all 0.3s ease;
+  /* 文字阴影 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 背景图片层 */
+.header-title-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 使用背景图片 */
+  background-image: url('../images/IMG_2126.JPG');
+  background-size: cover;
+  background-position: center;
+  /* 初始透明度 */
+  opacity: 0.4;
+  /* 位于底层 */
+  z-index: 1;
+  /* 过渡效果 */
+  transition: opacity 0.3s ease;
+}
+
+/* 文字样式 */
+.header h2 {
+  /* 取消加粗 */
+  font-weight: normal;
+  /* 字体大小 */
+  font-size: 40px;
+  /* 移除默认边距 */
+  margin: 0 0 20px 0;
+  /* 字间距 */
+  letter-spacing: 10px;
+  /* 渐变文字效果 */
+  background: linear-gradient(to right, pink, skyblue, #b8eab8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* 文字置于顶层 */
+  position: relative;
+  z-index: 2;
+  /* 过渡效果 */
+  transition: all 0.3s ease;
+}
+
+/* 为新增的段落添加样式 */
+.header p {
+  /* 文字置于顶层 */
+  position: relative;
+  z-index: 2;
+  /* 文字颜色 */
+  color: #333;
+  /* 字体大小 */
+  font-size: 18px;
+  /* 行高 */
+  line-height: 1.8;
+  /* 最大宽度 ，相对于父亲来说*/
+  max-width: 80%;
+  /* 文本两端对齐 */
+  text-align: justify;
+  /* 首行缩进两个字符 */
+  text-indent: 2em;
+  /* 过渡效果 */
+  transition: all 0.3s ease;
+}
+
+/* 容器悬停效果 */
+.header-title-container:hover {
+  /* 盒子阴影 */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  /* 轻微放大 */
+  transform: scale(1.02);
+}
+
+/* 背景图片悬停效果 */
+.header-title-container:hover::before {
+  /* 增加背景图片透明度 */
+  opacity: 0.6;
+}
+
+/* 文字悬停效果 */
+.header-title-container:hover h2 {
+  /* 文字阴影效果 */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  font-weight: normal;
+  font-size: 50px;
+  margin: 20px 0 30px 0;
+  letter-spacing: 10px;
+  color: #3498db;
+  /* 天蓝色文字 */
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 图片容器 - 使用浮动布局 */
+.image-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 0;
+  /* 容器级别的 */
+  background-color: #f9f9f9;
+  overflow: hidden;
+  /* 清除浮动 */
+  list-style: none;
+  /* 移除ul的默认列表样式 */
+}
+
+/* 单个图片盒子 - 浮动布局，一排六张图片 */
+.image-box {
+  float: left;
+  margin-right: 10px;
+  /* 图片之间的间距 */
+  width: calc(16.66% - 10px);
+  margin-bottom: 20px;
+  /* 图片之间的间距 */
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+  /* 四周的内边距 */
+}
+
+/* 移除每行第6个元素的margin-right，确保正确对齐 */
+.image-box:nth-child(6n) {
+  margin-right: 0;
+}
+
+/* 确保每行开始时正确换行 */
+.image-box:nth-child(6n+1) {
+  clear: left;
+}
+
+/* 图片样式 */
+.image-box img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  /* 去除图片默认的底部空白 */
+  transition: transform 0.3s ease;
+  /* 添加过渡效果 */
+}
+
+/* 图片盒子悬停效果 */
+.image-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: #5EB69C;
+  transition: all 0.3s ease;
+}
+
+.box .box-content {
+  padding: 20px;
+  text-align: center;
+  color: #27c29b;
+  /* 首行缩进 */
+  text-indent: 2em;
+  font-size: 18px;
+  /* 文字对齐 */
+  text-align: justify;
+  /* 文字阴影 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box .box-content h3 {
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 0;
+  color: #3d73ba;
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+/* 给p添加悬停效果 ，让他变大和有阴影*/
+.box .box-content p:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.box .box-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 90%;
+  text-align: justify;
+  text-indent: 2em;
+  /* 首行缩进 */
+  margin: 15px auto;
+  padding: 15px 20px;
+  color: #333;
+  font-weight: normal;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  margin-top: 50px;
+}
